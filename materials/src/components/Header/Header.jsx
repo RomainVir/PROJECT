@@ -12,8 +12,9 @@ import {
   Tooltip,
   MenuItem,
 } from "@mui/material/";
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
 import AdbIcon from "@mui/icons-material/Adb";
+import logoGiga from "../../assets/logoGiga.png";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -31,9 +32,10 @@ export default function Header() {
   const handleCloseUserMenu = () => setAnchorElUser(null);
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "green" }}>
+    <AppBar position="static" sx={{ backgroundColor: "blue" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          <Box sx={{ height: 64 }} alt="logo" src={logoGiga} />
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"
@@ -50,7 +52,7 @@ export default function Header() {
               textDecoration: "none",
             }}
           >
-            LOGO
+            COMPANY
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
